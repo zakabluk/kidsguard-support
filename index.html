@@ -22,6 +22,7 @@
   <div class="lang-switch">
     <button type="button" data-set-lang="ru">Русский</button>
     <button type="button" data-set-lang="en">English</button>
+    <button type="button" data-set-lang="pl">Polski</button>
   </div>
 
   <div data-lang="ru">
@@ -64,6 +65,26 @@
     <p><a href="privacy.html">Read the Privacy Policy</a></p>
   </div>
 
+  <div data-lang="pl">
+    <h1>KidsGuard</h1>
+    <p class="sub">Kontrola rodzicielska dla iPhone/iPad — blokowanie aplikacji w domu i według harmonogramu</p>
+
+    <h2>Wsparcie</h2>
+    <p>Jeśli masz pytanie lub problem z aplikacją KidsGuard, opisz go przez GitHub Issues:</p>
+    <p><a href="https://github.com/zakabluk/kidsguard-support/issues/new">Utwórz zgłoszenie (GitHub Issues)</a></p>
+
+    <h2>Jak działa aplikacja</h2>
+    <ul>
+      <li>Blokuje wybrane aplikacje (TikTok, YouTube, Roblox itd.) na urządzeniu dziecka za pomocą systemowego Family Controls / ManagedSettings (Apple Screen Time API)</li>
+      <li>Określa, czy dziecko jest „w domu” na podstawie strefy geograficznej (geofence), domowego Wi-Fi (BSSID routera) i opcjonalnie beacona BLE</li>
+      <li>Obsługuje wiele profili miejsc (np. „Dom”, „Szkoła”) z różnymi zasadami dla każdego</li>
+      <li>Wymaga, aby dziecko było w Twojej grupie Family Sharing — rodzic potwierdza dostęp do Czasu Ekranowego swoim Apple ID</li>
+    </ul>
+
+    <h2>Polityka prywatności</h2>
+    <p><a href="privacy.html">Przeczytaj politykę prywatności</a></p>
+  </div>
+
 <script>
   function setLang(lang){
     document.querySelectorAll('[data-lang]').forEach(function(el){
@@ -80,7 +101,13 @@
   });
   var saved = null;
   try { saved = localStorage.getItem('kg-lang'); } catch (e) {}
-  var initial = saved || (navigator.language && navigator.language.toLowerCase().indexOf('ru') === 0 ? 'ru' : 'en');
+  function detectLang(){
+    var l = (navigator.language || '').toLowerCase();
+    if (l.indexOf('ru') === 0) return 'ru';
+    if (l.indexOf('pl') === 0) return 'pl';
+    return 'en';
+  }
+  var initial = saved || detectLang();
   setLang(initial);
 </script>
 </body>

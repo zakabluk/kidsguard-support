@@ -21,6 +21,7 @@
   <div class="lang-switch">
     <button type="button" data-set-lang="ru">Русский</button>
     <button type="button" data-set-lang="en">English</button>
+    <button type="button" data-set-lang="pl">Polski</button>
   </div>
 
   <div data-lang="ru">
@@ -63,6 +64,26 @@
     <p>For privacy questions: <a href="https://github.com/zakabluk/kidsguard-support/issues/new">open an issue on GitHub</a>.</p>
   </div>
 
+  <div data-lang="pl">
+    <h1>Polityka prywatności KidsGuard</h1>
+    <p class="sub">Ostatnia aktualizacja: 26 września 2026</p>
+
+    <h2>Jakich danych używa aplikacja</h2>
+    <p>KidsGuard wykorzystuje lokalizację urządzenia (współrzędne GPS, BSSID podłączonego routera Wi-Fi oraz opcjonalnie sygnał beacona BLE), aby określić, czy dziecko znajduje się w jednym z miejsc skonfigurowanych przez rodzica (np. „Dom” lub „Szkoła”), i zastosować odpowiednie zasady blokowania aplikacji.</p>
+
+    <h2>Dokąd trafiają dane</h2>
+    <p><strong>Nigdzie.</strong> Wszystkie dane — lokalizacja, lista zablokowanych aplikacji, ustawienia profili — są przechowywane wyłącznie lokalnie na urządzeniu, we współdzielonym kontenerze App Group używanym tylko przez aplikację i jej rozszerzenie systemowe. Aplikacja nie posiada własnego serwera, nie korzysta z analityki, sieci reklamowych ani zewnętrznych SDK i nigdy nie przesyła danych poza urządzenie.</p>
+
+    <h2>Family Controls / Czas Ekranowy</h2>
+    <p>Blokowanie aplikacji odbywa się za pomocą systemowych frameworków Apple Family Controls i ManagedSettings — całkowicie na urządzeniu, bez udziału serwerów zewnętrznych.</p>
+
+    <h2>Usuwanie danych</h2>
+    <p>Wszystkie dane są automatycznie usuwane po odinstalowaniu aplikacji z urządzenia.</p>
+
+    <h2>Kontakt</h2>
+    <p>W sprawach dotyczących prywatności: <a href="https://github.com/zakabluk/kidsguard-support/issues/new">utwórz zgłoszenie na GitHub</a>.</p>
+  </div>
+
 <script>
   function setLang(lang){
     document.querySelectorAll('[data-lang]').forEach(function(el){
@@ -79,7 +100,13 @@
   });
   var saved = null;
   try { saved = localStorage.getItem('kg-lang'); } catch (e) {}
-  var initial = saved || (navigator.language && navigator.language.toLowerCase().indexOf('ru') === 0 ? 'ru' : 'en');
+  function detectLang(){
+    var l = (navigator.language || '').toLowerCase();
+    if (l.indexOf('ru') === 0) return 'ru';
+    if (l.indexOf('pl') === 0) return 'pl';
+    return 'en';
+  }
+  var initial = saved || detectLang();
   setLang(initial);
 </script>
 </body>
