@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KidsGuard — Privacy Policy / Политика конфиденциальности</title>
+<title>KidsFence — Privacy Policy / Политика конфиденциальности</title>
 <style>
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:640px;margin:0 auto;padding:32px 20px;line-height:1.6;color:#1a1a1a;background:#fff}
   h1{font-size:26px;margin-bottom:4px}
@@ -25,60 +25,69 @@
   </div>
 
   <div data-lang="ru">
-    <h1>Политика конфиденциальности KidsGuard</h1>
-    <p class="sub">Последнее обновление: 26 сентября 2026</p>
+    <h1>Политика конфиденциальности KidsFence</h1>
+    <p class="sub">Последнее обновление: 2 октября 2026</p>
 
     <h2>Какие данные использует приложение</h2>
-    <p>KidsGuard использует геолокацию устройства (GPS-координаты, BSSID подключённого Wi-Fi роутера и, опционально, сигнал BLE-маячка), чтобы определить, находится ли ребёнок в одном из заданных родителем мест (например, «Дом» или «Школа»), и применить соответствующие правила блокировки приложений.</p>
+    <p>KidsFence использует геолокацию устройства ребёнка (GPS-координаты, BSSID подключённого Wi-Fi роутера и, опционально, сигнал BLE-маячка), чтобы определить, находится ли ребёнок в одном из заданных родителем мест (например, «Дом» или «Школа»), и применить соответствующие правила блокировки приложений. Это происходит на самом устройстве: координаты и список заблокированных приложений никуда не отправляются.</p>
 
-    <h2>Куда передаются данные</h2>
-    <p><strong>Никуда.</strong> Все данные — геопозиция, список заблокированных приложений, настройки профилей — хранятся исключительно локально на устройстве, в защищённом хранилище общего доступа (App Group), которое использует только само приложение и его системное расширение. Приложение не имеет собственного сервера, не использует аналитику, рекламные сети или сторонние SDK, и никогда не отправляет данные за пределы устройства.</p>
+    <h2>Что синхронизируется через iCloud (необязательно)</h2>
+    <p>Если вы используете функцию «Удалённый доступ» (родитель смотрит статус и меняет правила со своего телефона), KidsFence сохраняет в публичной базе Apple CloudKit (iCloud) запись, привязанную к случайному 6-символьному «коду семьи»: названия профилей, режимы блокировки, расписания, настройки строгого режима и радиус геозоны, количество (но не названия) заблокированных приложений, категорий и сайтов, название активного профиля, включена ли блокировка, текстовый статус проверки Wi-Fi (включая название подключённой Wi-Fi сети) и время последнего выхода на связь, а также изменения, которые родитель ещё не передал на устройство ребёнка.</p><p><strong>Не сохраняются:</strong> GPS-координаты, имена, e-mail и Apple ID, контакты, идентификаторы устройств, перечень заблокированных приложений. Любой, кто знает код семьи, может прочитать этот статус и отправить изменения — относитесь к коду как к паролю и передавайте его только второму родителю.</p>
+
+    <h2>Кому передаются данные</h2>
+    <p>Приложение не имеет собственного сервера, не использует аналитику, рекламные сети или сторонние SDK и не продаёт и не передаёт данные третьим лицам. Записи в iCloud обрабатывает только Apple в соответствии с собственной политикой конфиденциальности. Данные не связаны с вашей личностью: в приложении нет учётных записей.</p>
 
     <h2>Family Controls / Экранное время</h2>
-    <p>Блокировка приложений выполняется через системный фреймворк Apple Family Controls и ManagedSettings — это происходит полностью на устройстве средствами iOS, без участия сторонних серверов.</p>
+    <p>Блокировка приложений выполняется через системный фреймворк Apple Family Controls и ManagedSettings — полностью на устройстве средствами iOS.</p>
 
     <h2>Удаление данных</h2>
-    <p>Все данные удаляются автоматически при удалении приложения с устройства.</p>
+    <p>Данные на устройстве удаляются при удалении приложения. Чтобы удалить запись из iCloud, <a href="https://github.com/zakabluk/kidsguard-support/issues/new">создайте обращение на GitHub</a> с просьбой об удалении; <strong>не публикуйте код семьи в обращении</strong> — мы ответим и согласуем безопасный способ его передачи.</p>
 
     <h2>Контакты</h2>
     <p>По вопросам конфиденциальности: <a href="https://github.com/zakabluk/kidsguard-support/issues/new">создайте обращение на GitHub</a>.</p>
   </div>
 
   <div data-lang="en">
-    <h1>KidsGuard Privacy Policy</h1>
-    <p class="sub">Last updated: September 26, 2026</p>
+    <h1>KidsFence Privacy Policy</h1>
+    <p class="sub">Last updated: October 2, 2026</p>
 
     <h2>What data the app uses</h2>
-    <p>KidsGuard uses the device's location (GPS coordinates, the connected Wi-Fi router's BSSID, and optionally a BLE beacon signal) to determine whether the child is at one of the places you've configured (e.g. "Home" or "School"), and applies the matching app-blocking rules.</p>
+    <p>KidsFence uses the child's device location (GPS coordinates, the connected Wi-Fi router's BSSID, and optionally a BLE beacon signal) to determine whether the child is at one of the places you've configured (e.g. "Home" or "School"), and applies the matching app-blocking rules. This happens on the device itself: coordinates and the list of blocked apps are never sent anywhere.</p>
 
-    <h2>Where the data goes</h2>
-    <p><strong>Nowhere.</strong> All data — location, the list of blocked apps, profile settings — is stored exclusively on the device, in a shared App Group container used only by the app and its system extension. The app has no server of its own, uses no analytics, ad networks, or third-party SDKs, and never transmits data off the device.</p>
+    <h2>What is synced through iCloud (optional)</h2>
+    <p>If you use the "Remote access" feature (a parent views status and changes rules from their own phone), KidsFence stores a record in Apple's CloudKit (iCloud) public database, keyed by a random 6-character "family code": profile names, blocking modes, schedules, strict-mode settings and geofence radius, the number (not the names) of blocked apps, categories and websites, the name of the active profile, whether blocking is on, a text status of the Wi-Fi check (including the name of the connected Wi-Fi network) and the time of the last check-in, plus changes the parent has made that the child's device has not yet picked up.</p><p><strong>Not stored:</strong> GPS coordinates, names, e-mail addresses or Apple IDs, contacts, device identifiers, or the list of blocked apps. Anyone who knows the family code can read this status and submit changes — treat the code like a password and share it only with the other parent.</p>
+
+    <h2>Who receives the data</h2>
+    <p>The app has no server of its own, uses no analytics, ad networks, or third-party SDKs, and does not sell or share data with third parties. iCloud records are processed only by Apple under Apple's own privacy policy. The data is not linked to your identity: the app has no accounts.</p>
 
     <h2>Family Controls / Screen Time</h2>
-    <p>App blocking is performed through Apple's system Family Controls and ManagedSettings frameworks — entirely on-device, with no third-party servers involved.</p>
+    <p>App blocking is performed through Apple's system Family Controls and ManagedSettings frameworks — entirely on-device.</p>
 
     <h2>Data deletion</h2>
-    <p>All data is automatically deleted when the app is removed from the device.</p>
+    <p>Data on the device is deleted when the app is removed. To have the iCloud record deleted, <a href="https://github.com/zakabluk/kidsguard-support/issues/new">open an issue on GitHub</a> asking for deletion; <strong>do not post your family code in the issue</strong> — we will reply and agree on a safe way to share it.</p>
 
     <h2>Contact</h2>
     <p>For privacy questions: <a href="https://github.com/zakabluk/kidsguard-support/issues/new">open an issue on GitHub</a>.</p>
   </div>
 
   <div data-lang="pl">
-    <h1>Polityka prywatności KidsGuard</h1>
-    <p class="sub">Ostatnia aktualizacja: 26 września 2026</p>
+    <h1>Polityka prywatności KidsFence</h1>
+    <p class="sub">Ostatnia aktualizacja: 2 października 2026</p>
 
     <h2>Jakich danych używa aplikacja</h2>
-    <p>KidsGuard wykorzystuje lokalizację urządzenia (współrzędne GPS, BSSID podłączonego routera Wi-Fi oraz opcjonalnie sygnał beacona BLE), aby określić, czy dziecko znajduje się w jednym z miejsc skonfigurowanych przez rodzica (np. „Dom” lub „Szkoła”), i zastosować odpowiednie zasady blokowania aplikacji.</p>
+    <p>KidsFence wykorzystuje lokalizację urządzenia dziecka (współrzędne GPS, BSSID podłączonego routera Wi-Fi oraz opcjonalnie sygnał beacona BLE), aby określić, czy dziecko znajduje się w jednym z miejsc skonfigurowanych przez rodzica (np. „Dom” lub „Szkoła”), i zastosować odpowiednie zasady blokowania aplikacji. Dzieje się to na samym urządzeniu: współrzędne i lista zablokowanych aplikacji nigdzie nie są wysyłane.</p>
 
-    <h2>Dokąd trafiają dane</h2>
-    <p><strong>Nigdzie.</strong> Wszystkie dane — lokalizacja, lista zablokowanych aplikacji, ustawienia profili — są przechowywane wyłącznie lokalnie na urządzeniu, we współdzielonym kontenerze App Group używanym tylko przez aplikację i jej rozszerzenie systemowe. Aplikacja nie posiada własnego serwera, nie korzysta z analityki, sieci reklamowych ani zewnętrznych SDK i nigdy nie przesyła danych poza urządzenie.</p>
+    <h2>Co jest synchronizowane przez iCloud (opcjonalnie)</h2>
+    <p>Jeśli korzystasz z funkcji „Zdalny dostęp” (rodzic przegląda status i zmienia zasady z własnego telefonu), KidsFence zapisuje w publicznej bazie Apple CloudKit (iCloud) rekord powiązany z losowym 6-znakowym „kodem rodziny”: nazwy profili, tryby blokowania, harmonogramy, ustawienia trybu ścisłego i promień strefy, liczbę (ale nie nazwy) zablokowanych aplikacji, kategorii i stron, nazwę aktywnego profilu, informację czy blokada jest włączona, tekstowy status sprawdzenia Wi-Fi (w tym nazwę podłączonej sieci Wi-Fi) i czas ostatniego połączenia, a także zmiany wprowadzone przez rodzica, których urządzenie dziecka jeszcze nie pobrało.</p><p><strong>Nie są zapisywane:</strong> współrzędne GPS, imiona i nazwiska, adresy e-mail ani Apple ID, kontakty, identyfikatory urządzeń, lista zablokowanych aplikacji. Każdy, kto zna kod rodziny, może odczytać ten status i przesłać zmiany — traktuj kod jak hasło i udostępniaj go tylko drugiemu rodzicowi.</p>
+
+    <h2>Komu trafiają dane</h2>
+    <p>Aplikacja nie posiada własnego serwera, nie korzysta z analityki, sieci reklamowych ani zewnętrznych SDK oraz nie sprzedaje i nie udostępnia danych osobom trzecim. Rekordy w iCloud przetwarza wyłącznie Apple zgodnie z własną polityką prywatności. Dane nie są powiązane z Twoją tożsamością: w aplikacji nie ma kont.</p>
 
     <h2>Family Controls / Czas Ekranowy</h2>
-    <p>Blokowanie aplikacji odbywa się za pomocą systemowych frameworków Apple Family Controls i ManagedSettings — całkowicie na urządzeniu, bez udziału serwerów zewnętrznych.</p>
+    <p>Blokowanie aplikacji odbywa się za pomocą systemowych frameworków Apple Family Controls i ManagedSettings — całkowicie na urządzeniu.</p>
 
     <h2>Usuwanie danych</h2>
-    <p>Wszystkie dane są automatycznie usuwane po odinstalowaniu aplikacji z urządzenia.</p>
+    <p>Dane na urządzeniu są usuwane po odinstalowaniu aplikacji. Aby usunąć rekord z iCloud, <a href="https://github.com/zakabluk/kidsguard-support/issues/new">utwórz zgłoszenie na GitHub</a> z prośbą o usunięcie; <strong>nie publikuj kodu rodziny w zgłoszeniu</strong> — odpowiemy i ustalimy bezpieczny sposób jego przekazania.</p>
 
     <h2>Kontakt</h2>
     <p>W sprawach dotyczących prywatności: <a href="https://github.com/zakabluk/kidsguard-support/issues/new">utwórz zgłoszenie na GitHub</a>.</p>
